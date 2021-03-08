@@ -8,10 +8,11 @@ namespace VkBot
     {
         static void Main(string[] args)
         {
+            //582751238
             string token = "---------"; // user token
             var api = new VkApi();
-            var User = new User(api, token);
-            User.SendMessage("", Animals.GetAnimal("shibes"), 582751238);
+            var user = new User(api, token);
+            user.SendMessage("", Animals.GetAnimal("shibes"), 582751238);
             Events.Start(api);
         }
     }

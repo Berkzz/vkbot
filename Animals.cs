@@ -20,6 +20,8 @@ namespace VkBot
                 return reader.ReadToEnd();
             }
         }
+        
+        
         public static string GetAnimal(string type)
         {
             return Get("http://shibe.online/api/" + type + "?count=1&urls=true&httpsUrls=true").Replace("[", "").Replace("\"", "").Replace("]", "");

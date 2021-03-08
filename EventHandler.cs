@@ -8,16 +8,16 @@ namespace VkBot
 {
     class EventHandler
     {
-        private static bool isConversation(Message m)
+        private static bool IsConversation(Message m)
         {
             return m.PeerId.Value > 2000000000;
         }
         public static void Handle(VkApi api, Message m)
         {
-            Console.WriteLine(isConversation(m));
+            Console.WriteLine(IsConversation(m));
             if(isConversation(m))
             {
-                Console.WriteLine("isConv");
+                Console.WriteLine("IsConv");
                 api.Messages.MarkAsRead(m.PeerId.ToString(), (long) m.Id);
             }
             

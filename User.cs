@@ -10,7 +10,8 @@ namespace VkBot
 {
     class User
     {
-        VkApi api;
+        private VkApi api;
+
 
         public User(VkApi api, string token)
         {
